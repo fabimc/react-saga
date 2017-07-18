@@ -1,0 +1,45 @@
+exports[`getRates Saga should call the ratesLoadingError action if the response errors 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "SELECT": Object {
+    "args": Array [],
+    "selector": [Function],
+  },
+}
+`;
+
+exports[`getRates Saga should call the ratesLoadingError action if the response errors 2`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "CALL": Object {
+    "args": Array [
+      "http://api.fixer.io/latest?base=mxstbr",
+    ],
+    "context": null,
+    "fn": [Function],
+  },
+}
+`;
+
+exports[`getRates Saga should dispatch the ratesLoaded action if it requests the data successfully 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "SELECT": Object {
+    "args": Array [],
+    "selector": [Function],
+  },
+}
+`;
+
+exports[`getRates Saga should dispatch the ratesLoaded action if it requests the data successfully 2`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "CALL": Object {
+    "args": Array [
+      "http://api.fixer.io/latest?base=mxstbr",
+    ],
+    "context": null,
+    "fn": [Function],
+  },
+}
+`;
