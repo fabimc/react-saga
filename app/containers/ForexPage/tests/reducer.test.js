@@ -1,27 +1,23 @@
-import { fromJS } from 'immutable';
+import { fromJS } from 'immutable'
 
-import homeReducer from '../reducer';
-import {
-  changeBase,
-} from '../actions';
+import homeReducer from '../reducer'
+import { changeBase } from '../actions'
 
 describe('homeReducer', () => {
-  let state;
+  let state
   beforeEach(() => {
-    state = fromJS({
-      base: '',
-    });
-  });
+    state = fromJS({ base: '', ratesData: { rates: false } })
+  })
 
   it('should return the initial state', () => {
-    const expectedResult = state;
-    expect(homeReducer(undefined, {})).toEqual(expectedResult);
-  });
+    const expectedResult = state
+    expect(homeReducer(undefined, {})).toEqual(expectedResult)
+  })
 
   it('should handle the changeBase action correctly', () => {
-    const fixture = 'mxstbr';
-    const expectedResult = state.set('base', fixture);
+    const fixture = 'USD'
+    const expectedResult = state.set('base', fixture)
 
-    expect(homeReducer(state, changeBase(fixture))).toEqual(expectedResult);
-  });
-});
+    expect(homeReducer(state, changeBase(fixture))).toEqual(expectedResult)
+  })
+})

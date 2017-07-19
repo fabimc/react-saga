@@ -13,7 +13,7 @@ Object {
   "@@redux-saga/IO": true,
   "CALL": Object {
     "args": Array [
-      "http://api.fixer.io/latest?base=mxstbr",
+      "http://api.fixer.io/latest?base=USD",
     ],
     "context": null,
     "fn": [Function],
@@ -36,7 +36,7 @@ Object {
   "@@redux-saga/IO": true,
   "CALL": Object {
     "args": Array [
-      "http://api.fixer.io/latest?base=mxstbr",
+      "http://api.fixer.io/latest?base=USD",
     ],
     "context": null,
     "fn": [Function],

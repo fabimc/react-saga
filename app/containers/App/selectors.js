@@ -21,12 +21,6 @@ const makeSelectRepos = () =>
     globalState => globalState.getIn([ 'userData', 'repositories' ])
   )
 
-const makeSelectRates = () =>
-  createSelector(
-    selectGlobal,
-    globalState => globalState.getIn([ 'ratesData', 'rates' ])
-  )
-
 const makeSelectLocationState = () => {
   let prevRoutingState
   let prevRoutingStateJS
@@ -50,6 +44,5 @@ export {
   makeSelectLoading,
   makeSelectError,
   makeSelectRepos,
-  makeSelectRates,
   makeSelectLocationState
 }

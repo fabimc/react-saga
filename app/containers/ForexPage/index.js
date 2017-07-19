@@ -9,21 +9,17 @@ import Helmet from 'react-helmet'
 import { FormattedMessage } from 'react-intl'
 import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect'
-
-import {
-  makeSelectRates,
-  makeSelectLoading,
-  makeSelectError
-} from 'containers/App/selectors'
+import { makeSelectLoading, makeSelectError } from 'containers/App/selectors'
+import { makeSelectRates } from 'containers/ForexPage/selectors'
 import H2 from 'components/H2'
-// import ReposList from 'components/ReposList'
+import SimpleList from 'components/SimpleList'
 import AtPrefix from './AtPrefix'
 import CenteredSection from './CenteredSection'
 import Form from './Form'
 import Input from './Input'
 import Section from './Section'
 import messages from './messages'
-import { loadRates } from '../App/actions'
+import { loadRates } from '../ForexPage/actions'
 import { changeBase } from './actions'
 import { makeSelectBase } from './selectors'
 
@@ -77,13 +73,14 @@ export class ForexPage extends React.PureComponent {
                 <Input
                   id='base'
                   type='text'
-                  placeholder='USD'
+                  placeholder='base'
                   value={this.props.base}
                   onChange={this.props.onChangeBase}
                 />
               </label>
             </Form>
-            <p> here goes the list </p>
+            <SimpleList {...ratesListProps} />
+            <p>{JSON.stringify(rates)}</p>
           </Section>
         </div>
       </article>
@@ -98,7 +95,7 @@ ForexPage.propTypes = {
     React.PropTypes.bool
   ]),
   rates: React.PropTypes.oneOfType([
-    React.PropTypes.object,
+    React.PropTypes.array,
     React.PropTypes.bool
   ]),
   onSubmitForm: React.PropTypes.func,

@@ -9,4 +9,12 @@ const selectForex = state => state.get('forex')
 const makeSelectBase = () =>
   createSelector(selectForex, forexState => forexState.get('base'))
 
-export { selectForex, makeSelectBase }
+const makeSelectRates = () =>
+  createSelector(
+    selectForex,
+    forexState =>
+      Object
+        .entries(forexState.getIn([ 'ratesData', 'rates' ]))
+        .map(([ base, value ]) => ({ base, value }))
+  )
+export { selectForex, makeSelectBase, makeSelectRates }

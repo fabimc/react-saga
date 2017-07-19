@@ -9,4 +9,7 @@
  * export const YOUR_ACTION_CONSTANT = 'yourproject/YourContainer/YOUR_ACTION_CONSTANT';
  */
 
-export const CHANGE_BASE = 'boilerplate/Forex/CHANGE_BASE';
+export const CHANGE_BASE = 'boilerplate/Forex/CHANGE_BASE'
+export const LOAD_RATES = 'boilerplate/Forex/LOAD_RATES'
+export const LOAD_RATES_SUCCESS = 'boilerplate/Forex/LOAD_RATES_SUCCESS'
+export const LOAD_RATES_ERROR = 'boilerplate/Forex/LOAD_RATES_ERROR'

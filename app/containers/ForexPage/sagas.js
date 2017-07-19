@@ -11,8 +11,8 @@ import {
   takeLatest
 } from 'redux-saga/effects'
 import { LOCATION_CHANGE } from 'react-router-redux'
-import { LOAD_RATES } from 'containers/App/constants'
-import { ratesLoaded, ratesLoadingError } from 'containers/App/actions'
+import { LOAD_RATES } from 'containers/ForexPage/constants'
+import { ratesLoadingError, ratesLoaded } from 'containers/ForexPage/actions'
 
 import request from 'utils/request'
 import { makeSelectBase } from 'containers/ForexPage/selectors'
